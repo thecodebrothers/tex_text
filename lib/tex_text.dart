@@ -51,6 +51,10 @@ class TexText extends StatelessWidget {
         .replaceAll(r"\right)", r")")
         .replaceAll(r"(", r"{\left({")
         .replaceAll(r")", r"}\right)}")
+        .replaceAll(r"\left\langle", r"\langle")
+        .replaceAll(r"\right\rangle", r"\rangle")
+        .replaceAll(r"\langle", r"{\left\langle{")
+        .replaceAll(r"\rangle", r"}\right\rangle}")
         .replaceAll(RegExp(r"\\tf"), r"\therefore")
         .replaceAll(RegExp(r"\\bc"), r"\because")
         .replaceAllMapped(
